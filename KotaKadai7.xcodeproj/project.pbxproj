@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		B991773B27ACE53700623001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B991773A27ACE53700623001 /* AppDelegate.swift */; };
 		B991773D27ACE53700623001 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B991773C27ACE53700623001 /* SceneDelegate.swift */; };
-		B991773F27ACE53700623001 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B991773E27ACE53700623001 /* ViewController.swift */; };
 		B991774227ACE53700623001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B991774027ACE53700623001 /* Main.storyboard */; };
 		B991774427ACE53B00623001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B991774327ACE53B00623001 /* Assets.xcassets */; };
 		B991774727ACE53B00623001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B991774527ACE53B00623001 /* LaunchScreen.storyboard */; };
+		B991774F27ACE6E800623001 /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B991774E27ACE6E800623001 /* PlusViewController.swift */; };
+		B991775127ACE6F800623001 /* MinusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B991775027ACE6F800623001 /* MinusViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B991773727ACE53700623001 /* KotaKadai7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KotaKadai7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B991773A27ACE53700623001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B991773C27ACE53700623001 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B991773E27ACE53700623001 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B991774127ACE53700623001 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B991774327ACE53B00623001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B991774627ACE53B00623001 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B991774827ACE53B00623001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B991774E27ACE6E800623001 /* PlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
+		B991775027ACE6F800623001 /* MinusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinusViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				B991773A27ACE53700623001 /* AppDelegate.swift */,
 				B991773C27ACE53700623001 /* SceneDelegate.swift */,
-				B991773E27ACE53700623001 /* ViewController.swift */,
+				B991774E27ACE6E800623001 /* PlusViewController.swift */,
+				B991775027ACE6F800623001 /* MinusViewController.swift */,
 				B991774027ACE53700623001 /* Main.storyboard */,
 				B991774327ACE53B00623001 /* Assets.xcassets */,
 				B991774527ACE53B00623001 /* LaunchScreen.storyboard */,
@@ -77,6 +80,7 @@
 				B991773327ACE53700623001 /* Sources */,
 				B991773427ACE53700623001 /* Frameworks */,
 				B991773527ACE53700623001 /* Resources */,
+				B991775227AD698D00623001 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -133,14 +137,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B991775227AD698D00623001 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B991773327ACE53700623001 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B991773F27ACE53700623001 /* ViewController.swift in Sources */,
 				B991773B27ACE53700623001 /* AppDelegate.swift in Sources */,
 				B991773D27ACE53700623001 /* SceneDelegate.swift in Sources */,
+				B991774F27ACE6E800623001 /* PlusViewController.swift in Sources */,
+				B991775127ACE6F800623001 /* MinusViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
