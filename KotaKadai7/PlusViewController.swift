@@ -15,14 +15,9 @@ class PlusViewController: UIViewController {
 
     @IBAction private func didTapPlusButton(_ sender: Any) {
 
-        self.view.endEditing(true)
+        view.endEditing(true)
 
-        guard let firstNumberInt = Int(firstNumberTextField.text ?? "") else {
-            answerTextLabel.text = "適切な数値が入力されていません"
-            return
-        }
-
-        guard let secondNumberInt = Int(secondNumberTextField.text ?? "") else {
+        guard let firstNumberInt = Int(firstNumberTextField.text ?? ""), let secondNumberInt = Int(secondNumberTextField.text ?? "") else {
             answerTextLabel.text = "適切な数値が入力されていません"
             return
         }
